@@ -2,10 +2,34 @@ name: Test
 
 on:
   push:
+    paths:
+      - '**/*.py'
+      - '**/*.pyi'
+      - 'tests/**'
+      - 'pyproject.toml'
+      - 'pytest.ini'
+      - 'setup.cfg'
+      - 'setup.py'
+      - 'tox.ini'
+      - 'requirements*.txt'
+      - 'poetry.lock'
+      - '.github/workflows/test.yaml'
     branches:
     - master
     - develop
   pull_request:
+    paths:
+      - '**/*.py'
+      - '**/*.pyi'
+      - 'tests/**'
+      - 'pyproject.toml'
+      - 'pytest.ini'
+      - 'setup.cfg'
+      - 'setup.py'
+      - 'tox.ini'
+      - 'requirements*.txt'
+      - 'poetry.lock'
+      - '.github/workflows/test.yaml'
 
 jobs:
 
