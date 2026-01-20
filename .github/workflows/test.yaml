@@ -2,10 +2,20 @@ name: Test
 
 on:
   push:
+    paths:
+      - '**/*.py'
+      - 'tests/**'
+      - 'requirements*.txt'
+      - '.github/workflows/test.yaml'
     branches:
     - master
     - develop
   pull_request:
+    paths:
+      - '**/*.py'
+      - 'tests/**'
+      - 'requirements*.txt'
+      - '.github/workflows/test.yaml'
 
 jobs:
 
